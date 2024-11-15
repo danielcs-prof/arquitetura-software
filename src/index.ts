@@ -1,16 +1,13 @@
-import {Produto} from './model/produto'
-import { Estoque } from './model/estoque'
+import { Tarefa} from './exercicios/ex04/tarefa'
+import { GestorTarefas} from './exercicios/ex04/getorTarefas'
 
-const produto1 = new Produto(6,'chocolate',5.00,2)
-const estoque = new Estoque()
-estoque.adicionarProduto(new Produto(1,'chocolate1',5.10))
-estoque.adicionarProduto(new Produto(2,'chocolate2',5.20,3))
-estoque.adicionarProduto(new Produto(3,'chocolate3',5.30))
-estoque.adicionarProduto(new Produto(4,'chocolate4',5.40,5))
-estoque.adicionarProduto(new Produto(5,'chocolate5',5.50,6))
-estoque.adicionarProduto(produto1)
-estoque.adicionarProduto(produto1)
-console.log(estoque.listaProduto)
-estoque.atualizarQuantidade(6,10)
-console.log(estoque.listaProduto)
-Produto.salvar()
+const tarefa1 = new Tarefa(1,'aula1','aula de typescript 1','em andamento')
+const tarefa2 = new Tarefa(2,'lab1','aula de typescript  1','em andamento')
+const tarefa3 = new Tarefa(3,'aula2','aula de typescript 2','em andamento')
+const tarefa4 = new Tarefa(4,'lab2','aula de typescript 2','em andamento')
+const getorTarefas = new GestorTarefas([])
+getorTarefas.adicionarTarefa(tarefa1)
+getorTarefas.adicionarTarefa(tarefa2)
+getorTarefas.adicionarTarefa(tarefa3)
+getorTarefas.adicionarTarefa(tarefa4)
+console.log(getorTarefas.tarefas)
